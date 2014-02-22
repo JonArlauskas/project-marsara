@@ -7,8 +7,7 @@
 //
 
 #import "PMSPhotoViewController.h"
-#import "PMSOpenCVFunctions.h"
-using namespace cv;
+#import "PMSImageProcessing.h"
 
 @interface PMSPhotoViewController ()
 
@@ -74,8 +73,8 @@ using namespace cv;
     self.imageView.image = chosenImage;
     
     // OpenCV calculations for dominant color in image
-    Mat src = [PMSOpenCVFunctions cvMatFromUIImage:chosenImage];
-    Vec3d result = [PMSOpenCVFunctions findDominantColor:src];
+    cv::Mat src = [PMSImageProcessing cvMatFromUIImage:chosenImage];
+    cv::Vec3d result = [PMSImageProcessing findDominantColor:src];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
@@ -88,10 +87,11 @@ using namespace cv;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-if([segue.identifier isEqualToString:@"showColour"]){
-    PMSResultViewController *controller = (PMSResultViewController*)segue.destinationViewController;
-    controller.resultingColour =
-}
+    if([segue.identifier isEqualToString:@"showColour"]){
+        PMSResultViewController *controller = (PMSResultViewController*)segue.destinationViewController;
+        // TODO: need method to convert color to string
+        controller.resultingColour = @"Blue";
+    }
 }
 
 
