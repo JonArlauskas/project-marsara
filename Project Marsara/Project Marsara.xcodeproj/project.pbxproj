@@ -22,6 +22,7 @@
 		23E1B84318B8EC36000C376E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23E1B84118B8EC36000C376E /* InfoPlist.strings */; };
 		23E1B84518B8EC36000C376E /* Project_MarsaraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B84418B8EC36000C376E /* Project_MarsaraTests.m */; };
 		23E1B85018B90621000C376E /* PMPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B84F18B90621000C376E /* PMPhotoViewController.m */; };
+		23E1B85318B920E8000C376E /* PMResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85218B920E8000C376E /* PMResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		23E1B84418B8EC36000C376E /* Project_MarsaraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project_MarsaraTests.m; sourceTree = "<group>"; };
 		23E1B84E18B90621000C376E /* PMPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPhotoViewController.h; sourceTree = "<group>"; };
 		23E1B84F18B90621000C376E /* PMPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMPhotoViewController.m; sourceTree = "<group>"; };
+		23E1B85118B920E8000C376E /* PMResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMResultViewController.h; sourceTree = "<group>"; };
+		23E1B85218B920E8000C376E /* PMResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMResultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				23E1B82018B8EC35000C376E /* Supporting Files */,
 				23E1B84E18B90621000C376E /* PMPhotoViewController.h */,
 				23E1B84F18B90621000C376E /* PMPhotoViewController.m */,
+				23E1B85118B920E8000C376E /* PMResultViewController.h */,
+				23E1B85218B920E8000C376E /* PMResultViewController.m */,
 			);
 			path = "Project Marsara";
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				23E1B82618B8EC35000C376E /* main.m in Sources */,
 				23E1B83018B8EC35000C376E /* PMViewController.m in Sources */,
 				23E1B82A18B8EC35000C376E /* PMAppDelegate.m in Sources */,
+				23E1B85318B920E8000C376E /* PMResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
