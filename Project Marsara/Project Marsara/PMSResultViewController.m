@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 theregime. All rights reserved.
 //
 
-#import "PMResultViewController.h"
+#import "PMSResultViewController.h"
 
-@interface PMResultViewController ()
+@interface PMSResultViewController ()
 
 @end
 

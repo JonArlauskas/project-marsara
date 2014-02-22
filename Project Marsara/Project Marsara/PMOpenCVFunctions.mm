@@ -1,6 +1,6 @@
-#import "PMOpenCVFunctions.h"
+#import "PMSOpenCVFunctions.h"
 
-@implementation OpenCVFunctions
+@implementation PMSOpenCVFunctions
 
 - (cv::Mat)cvMatFromUIImage:(UIImage *)image {
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);

@@ -1,5 +1,5 @@
 //
-//  PMAppDelegate.h
+//  PMResultViewController.h
 //  Project Marsara
 //
 //  Created by Nicolas Langley on 2/22/14.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PMAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface PMSResultViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextView *colorResultText;
 
 @end

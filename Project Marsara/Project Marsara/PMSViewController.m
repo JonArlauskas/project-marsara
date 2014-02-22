@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 theregime. All rights reserved.
 //
 
-#import "PMViewController.h"
+#import "PMSViewController.h"
 
-@interface PMViewController ()
+@interface PMSViewController ()
 
 @end
 

@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 theregime. All rights reserved.
 //
 
-#import "PMAppDelegate.h"
+#import "PMSAppDelegate.h"
 
-@implementation PMAppDelegate
+@implementation PMSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

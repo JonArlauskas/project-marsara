@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 theregime. All rights reserved.
 //
 
-#import "PMPhotoViewController.h"
-#import "PMOpenCVFunctions.h"
+#import "PMSPhotoViewController.h"
+#import "PMSOpenCVFunctions.h"
 
-@interface PMPhotoViewController ()
+@interface PMSPhotoViewController ()
 
 @end
 
-@implementation PMPhotoViewController
+@implementation PMSPhotoViewController
 
 - (void)viewDidLoad {
     
@@ -70,6 +70,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    
     self.imageView.image = chosenImage;
     
     // TODO: Get color of image using OpenCV

@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
 
-@interface OpenCVFunctions : NSObject
+@interface PMSOpenCVFunctions : NSObject
 
 - (cv::Mat)cvMatFromUIImage:(UIImage *)image;
 - (cv::Mat)cvMatGrayFromUIImage:(UIImage *)image;

@@ -12,17 +12,17 @@
 		23E1B81E18B8EC35000C376E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B81D18B8EC35000C376E /* UIKit.framework */; };
 		23E1B82418B8EC35000C376E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23E1B82218B8EC35000C376E /* InfoPlist.strings */; };
 		23E1B82618B8EC35000C376E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B82518B8EC35000C376E /* main.m */; };
-		23E1B82A18B8EC35000C376E /* PMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B82918B8EC35000C376E /* PMAppDelegate.m */; };
+		23E1B82A18B8EC35000C376E /* PMSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B82918B8EC35000C376E /* PMSAppDelegate.m */; };
 		23E1B82D18B8EC35000C376E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E1B82B18B8EC35000C376E /* Main.storyboard */; };
-		23E1B83018B8EC35000C376E /* PMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B82F18B8EC35000C376E /* PMViewController.m */; };
+		23E1B83018B8EC35000C376E /* PMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B82F18B8EC35000C376E /* PMSViewController.m */; };
 		23E1B83218B8EC35000C376E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E1B83118B8EC35000C376E /* Images.xcassets */; };
 		23E1B83918B8EC36000C376E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B83818B8EC36000C376E /* XCTest.framework */; };
 		23E1B83A18B8EC36000C376E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B81918B8EC35000C376E /* Foundation.framework */; };
 		23E1B83B18B8EC36000C376E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B81D18B8EC35000C376E /* UIKit.framework */; };
 		23E1B84318B8EC36000C376E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23E1B84118B8EC36000C376E /* InfoPlist.strings */; };
 		23E1B84518B8EC36000C376E /* Project_MarsaraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B84418B8EC36000C376E /* Project_MarsaraTests.m */; };
-		23E1B85018B90621000C376E /* PMPhotoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B84F18B90621000C376E /* PMPhotoViewController.mm */; };
-		23E1B85318B920E8000C376E /* PMResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85218B920E8000C376E /* PMResultViewController.m */; };
+		23E1B85018B90621000C376E /* PMSPhotoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B84F18B90621000C376E /* PMSPhotoViewController.mm */; };
+		23E1B85318B920E8000C376E /* PMSResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85218B920E8000C376E /* PMSResultViewController.m */; };
 		23E1B85518B92280000C376E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B85418B92280000C376E /* opencv2.framework */; };
 		23E1B85818B926D4000C376E /* PMOpenCVFunctions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85718B926D4000C376E /* PMOpenCVFunctions.mm */; };
 /* End PBXBuildFile section */
@@ -46,23 +46,23 @@
 		23E1B82318B8EC35000C376E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23E1B82518B8EC35000C376E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		23E1B82718B8EC35000C376E /* Project Marsara-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Project Marsara-Prefix.pch"; sourceTree = "<group>"; };
-		23E1B82818B8EC35000C376E /* PMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMAppDelegate.h; sourceTree = "<group>"; };
-		23E1B82918B8EC35000C376E /* PMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMAppDelegate.m; sourceTree = "<group>"; };
+		23E1B82818B8EC35000C376E /* PMSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMSAppDelegate.h; sourceTree = "<group>"; };
+		23E1B82918B8EC35000C376E /* PMSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMSAppDelegate.m; sourceTree = "<group>"; };
 		23E1B82C18B8EC35000C376E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		23E1B82E18B8EC35000C376E /* PMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMViewController.h; sourceTree = "<group>"; };
-		23E1B82F18B8EC35000C376E /* PMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMViewController.m; sourceTree = "<group>"; };
+		23E1B82E18B8EC35000C376E /* PMSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMSViewController.h; sourceTree = "<group>"; };
+		23E1B82F18B8EC35000C376E /* PMSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMSViewController.m; sourceTree = "<group>"; };
 		23E1B83118B8EC35000C376E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		23E1B83718B8EC36000C376E /* Project MarsaraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project MarsaraTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E1B83818B8EC36000C376E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		23E1B84018B8EC36000C376E /* Project MarsaraTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Project MarsaraTests-Info.plist"; sourceTree = "<group>"; };
 		23E1B84218B8EC36000C376E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23E1B84418B8EC36000C376E /* Project_MarsaraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project_MarsaraTests.m; sourceTree = "<group>"; };
-		23E1B84E18B90621000C376E /* PMPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPhotoViewController.h; sourceTree = "<group>"; };
-		23E1B84F18B90621000C376E /* PMPhotoViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PMPhotoViewController.mm; sourceTree = "<group>"; };
-		23E1B85118B920E8000C376E /* PMResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMResultViewController.h; sourceTree = "<group>"; };
-		23E1B85218B920E8000C376E /* PMResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMResultViewController.m; sourceTree = "<group>"; };
+		23E1B84E18B90621000C376E /* PMSPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSPhotoViewController.h; sourceTree = "<group>"; };
+		23E1B84F18B90621000C376E /* PMSPhotoViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PMSPhotoViewController.mm; sourceTree = "<group>"; };
+		23E1B85118B920E8000C376E /* PMSResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSResultViewController.h; sourceTree = "<group>"; };
+		23E1B85218B920E8000C376E /* PMSResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSResultViewController.m; sourceTree = "<group>"; };
 		23E1B85418B92280000C376E /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
-		23E1B85618B926B2000C376E /* PMOpenCVFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOpenCVFunctions.h; sourceTree = "<group>"; };
+		23E1B85618B926B2000C376E /* PMSOpenCVFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSOpenCVFunctions.h; sourceTree = "<group>"; };
 		23E1B85718B926D4000C376E /* PMOpenCVFunctions.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PMOpenCVFunctions.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,18 +125,18 @@
 		23E1B81F18B8EC35000C376E /* Project Marsara */ = {
 			isa = PBXGroup;
 			children = (
-				23E1B82818B8EC35000C376E /* PMAppDelegate.h */,
-				23E1B82918B8EC35000C376E /* PMAppDelegate.m */,
+				23E1B82818B8EC35000C376E /* PMSAppDelegate.h */,
+				23E1B82918B8EC35000C376E /* PMSAppDelegate.m */,
 				23E1B82B18B8EC35000C376E /* Main.storyboard */,
-				23E1B82E18B8EC35000C376E /* PMViewController.h */,
-				23E1B82F18B8EC35000C376E /* PMViewController.m */,
+				23E1B82E18B8EC35000C376E /* PMSViewController.h */,
+				23E1B82F18B8EC35000C376E /* PMSViewController.m */,
 				23E1B83118B8EC35000C376E /* Images.xcassets */,
 				23E1B82018B8EC35000C376E /* Supporting Files */,
-				23E1B84E18B90621000C376E /* PMPhotoViewController.h */,
-				23E1B84F18B90621000C376E /* PMPhotoViewController.mm */,
-				23E1B85118B920E8000C376E /* PMResultViewController.h */,
-				23E1B85218B920E8000C376E /* PMResultViewController.m */,
-				23E1B85618B926B2000C376E /* PMOpenCVFunctions.h */,
+				23E1B84E18B90621000C376E /* PMSPhotoViewController.h */,
+				23E1B84F18B90621000C376E /* PMSPhotoViewController.mm */,
+				23E1B85118B920E8000C376E /* PMSResultViewController.h */,
+				23E1B85218B920E8000C376E /* PMSResultViewController.m */,
+				23E1B85618B926B2000C376E /* PMSOpenCVFunctions.h */,
 				23E1B85718B926D4000C376E /* PMOpenCVFunctions.mm */,
 			);
 			path = "Project Marsara";
@@ -215,7 +215,7 @@
 		23E1B80E18B8EC35000C376E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = PM;
+				CLASSPREFIX = PMS;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = theregime;
 				TargetAttributes = {
@@ -269,12 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E1B85018B90621000C376E /* PMPhotoViewController.mm in Sources */,
+				23E1B85018B90621000C376E /* PMSPhotoViewController.mm in Sources */,
 				23E1B85818B926D4000C376E /* PMOpenCVFunctions.mm in Sources */,
 				23E1B82618B8EC35000C376E /* main.m in Sources */,
-				23E1B83018B8EC35000C376E /* PMViewController.m in Sources */,
-				23E1B82A18B8EC35000C376E /* PMAppDelegate.m in Sources */,
-				23E1B85318B920E8000C376E /* PMResultViewController.m in Sources */,
+				23E1B83018B8EC35000C376E /* PMSViewController.m in Sources */,
+				23E1B82A18B8EC35000C376E /* PMSAppDelegate.m in Sources */,
+				23E1B85318B920E8000C376E /* PMSResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

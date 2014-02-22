@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PMPhotoViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface PMSPhotoViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)takePicture:(UIButton *)sender;
