@@ -60,33 +60,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ujl-YA-iAm">
-                                <rect key="frame" x="0.0" y="64" width="320" height="324"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Bg-wY-5w5">
-                                <rect key="frame" x="118" y="437" width="84" height="30"/>
+                                <rect key="frame" x="118" y="85" width="84" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take Picture">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="0Hg-vU-Ilx" eventType="touchUpInside" id="ENN-hu-jDT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Fz-MX-tHk">
-                                <rect key="frame" x="107" y="500" width="106" height="30"/>
+                                <rect key="frame" x="107" y="123" width="106" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choose Picture">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectPicture:" destination="0Hg-vU-Ilx" eventType="touchUpInside" id="sda-2t-uX9"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="nS0-ac-1HY">
+                                <rect key="frame" x="29" y="185" width="271" height="347"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ENr-oI-GKi"/>
                     <connections>
-                        <outlet property="choosePicture" destination="6Fz-MX-tHk" id="Z6Z-pw-otM"/>
-                        <outlet property="imageView" destination="ujl-YA-iAm" id="rc8-CE-jBQ"/>
-                        <outlet property="takePicture" destination="6Bg-wY-5w5" id="Uf6-ZN-hrT"/>
-                        <outlet property="view" destination="6Bg-wY-5w5" id="b6d-P9-eac"/>
+                        <outlet property="imageView" destination="nS0-ac-1HY" id="yTK-ER-I0m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2i0-O9-BgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
