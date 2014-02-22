@@ -86,9 +86,9 @@
     
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"showColour"]){
-        PMSResultViewController *controller = (PMSResultViewController*)segue.destinationViewController;
+        PMSResultViewController *controller = (PMSResultViewController *)segue.destinationViewController;
         // TODO: need method to convert color to string
         controller.resultingColour = @"Blue";
     }

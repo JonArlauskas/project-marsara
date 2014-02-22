@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PMSResultViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextView *colorResultText;
-@property (nonatomic)NSString *resultingColour;
+@property (weak, nonatomic) IBOutlet UITextField *colorResultText;
+@property (nonatomic) NSString *resultingColour;
 
 @end

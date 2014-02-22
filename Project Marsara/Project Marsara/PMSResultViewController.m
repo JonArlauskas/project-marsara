@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self.colorResultText setText:self.resultingColour];
+    
 }
 
 - (void)didReceiveMemoryWarning
