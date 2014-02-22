@@ -8,6 +8,7 @@
 
 #import "PMSPhotoViewController.h"
 #import "PMSOpenCVFunctions.h"
+using namespace cv;
 
 @interface PMSPhotoViewController ()
 
@@ -71,10 +72,14 @@
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     
-    self.imageView.image = chosenImage;
+    Mat src = [PMSOpenCVFunctions cvMatFromUIImage:chosenImage];
+    Mat HSV;
+    Mat threshold;
+    cvtColor(src,HSV,CV_BGR2HSV);
+    inRange(HSV,Scalar(106,60,90),Scalar(124,255,255),threshold);
+    UIImage *filteredImage = [PMSOpenCVFunctions UIImageFromCVMat:HSV];
     
-    // TODO: Get color of image using OpenCV
-    
+    self.imageView.image = filteredImage;
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     

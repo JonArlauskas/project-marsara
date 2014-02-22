@@ -2,7 +2,7 @@
 
 @implementation PMSOpenCVFunctions
 
-- (cv::Mat)cvMatFromUIImage:(UIImage *)image {
++ (cv::Mat)cvMatFromUIImage:(UIImage *)image {
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
     CGFloat cols = image.size.width;
     CGFloat rows = image.size.height;
@@ -24,7 +24,7 @@
     return cvMat;
 }
 
-- (cv::Mat)cvMatGrayFromUIImage:(UIImage *)image {
++ (cv::Mat)cvMatGrayFromUIImage:(UIImage *)image {
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
     CGFloat cols = image.size.width;
     CGFloat rows = image.size.height;
@@ -46,7 +46,7 @@
     return cvMat;
 }
 
--(UIImage *)UIImageFromCVMat:(cv::Mat)cvMat {
++ (UIImage *)UIImageFromCVMat:(cv::Mat)cvMat {
     NSData *data = [NSData dataWithBytes:cvMat.data length:cvMat.elemSize()*cvMat.total()];
     CGColorSpaceRef colorSpace;
     

@@ -24,7 +24,7 @@
 		23E1B85018B90621000C376E /* PMSPhotoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B84F18B90621000C376E /* PMSPhotoViewController.mm */; };
 		23E1B85318B920E8000C376E /* PMSResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85218B920E8000C376E /* PMSResultViewController.m */; };
 		23E1B85518B92280000C376E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B85418B92280000C376E /* opencv2.framework */; };
-		23E1B85818B926D4000C376E /* PMOpenCVFunctions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85718B926D4000C376E /* PMOpenCVFunctions.mm */; };
+		23E1B85818B926D4000C376E /* PMSOpenCVFunctions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85718B926D4000C376E /* PMSOpenCVFunctions.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,7 @@
 		23E1B85218B920E8000C376E /* PMSResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSResultViewController.m; sourceTree = "<group>"; };
 		23E1B85418B92280000C376E /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		23E1B85618B926B2000C376E /* PMSOpenCVFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSOpenCVFunctions.h; sourceTree = "<group>"; };
-		23E1B85718B926D4000C376E /* PMOpenCVFunctions.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PMOpenCVFunctions.mm; sourceTree = "<group>"; };
+		23E1B85718B926D4000C376E /* PMSOpenCVFunctions.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PMSOpenCVFunctions.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +137,7 @@
 				23E1B85118B920E8000C376E /* PMSResultViewController.h */,
 				23E1B85218B920E8000C376E /* PMSResultViewController.m */,
 				23E1B85618B926B2000C376E /* PMSOpenCVFunctions.h */,
-				23E1B85718B926D4000C376E /* PMOpenCVFunctions.mm */,
+				23E1B85718B926D4000C376E /* PMSOpenCVFunctions.mm */,
 			);
 			path = "Project Marsara";
 			sourceTree = "<group>";
@@ -270,7 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23E1B85018B90621000C376E /* PMSPhotoViewController.mm in Sources */,
-				23E1B85818B926D4000C376E /* PMOpenCVFunctions.mm in Sources */,
+				23E1B85818B926D4000C376E /* PMSOpenCVFunctions.mm in Sources */,
 				23E1B82618B8EC35000C376E /* main.m in Sources */,
 				23E1B83018B8EC35000C376E /* PMSViewController.m in Sources */,
 				23E1B82A18B8EC35000C376E /* PMSAppDelegate.m in Sources */,

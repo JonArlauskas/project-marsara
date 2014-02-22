@@ -12,7 +12,7 @@
 
 @end
 
-@implementation PMViewController
+@implementation PMSViewController
 
 - (void)viewDidLoad
 {

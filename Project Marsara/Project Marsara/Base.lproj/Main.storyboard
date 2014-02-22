@@ -22,7 +22,7 @@
         <!--View Controller-->
         <scene sceneID="ARx-RG-C1G">
             <objects>
-                <viewController id="FKX-eS-rqb" customClass="PMViewController" sceneMemberID="viewController">
+                <viewController id="FKX-eS-rqb" customClass="PMSViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Svo-Lj-HFK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -55,7 +55,7 @@
         <!--Photo View Controller-->
         <scene sceneID="4bd-TQ-pUe">
             <objects>
-                <viewController id="0Hg-vU-Ilx" customClass="PMPhotoViewController" sceneMemberID="viewController">
+                <viewController id="0Hg-vU-Ilx" customClass="PMSPhotoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BBa-5s-pGQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

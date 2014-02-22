@@ -12,7 +12,7 @@
 
 @end
 
-@implementation PMResultViewController
+@implementation PMSResultViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
