@@ -7,6 +7,7 @@
 //
 
 #import "PMPhotoViewController.h"
+#import "PMOpenCVFunctions.h"
 
 @interface PMPhotoViewController ()
 
@@ -70,6 +71,9 @@
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = chosenImage;
+    
+    // TODO: Get color of image using OpenCV
+    
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
