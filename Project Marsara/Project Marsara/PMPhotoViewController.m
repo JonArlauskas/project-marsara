@@ -19,18 +19,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    // Handle case where device has no camera
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        
         UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
                                                               message:@"Device has no camera"
                                                              delegate:nil
                                                     cancelButtonTitle:@"OK"
                                                     otherButtonTitles: nil];
-        
         [myAlertView show];
-        
     }
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -39,7 +36,10 @@
     
 }
 
+# pragma mark - UIButton action handler methods
+
 - (IBAction)takePicture:(UIButton *)sender {
+    // Create image picker and set source to be camera
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.allowsEditing = YES;
@@ -49,6 +49,7 @@
 }
 
 - (IBAction)selectPicture:(UIButton *)sender {
+    // Create image picker and set source to be photo library
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.allowsEditing = YES;
