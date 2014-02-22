@@ -87,4 +87,12 @@ using namespace cv;
     
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+if([segue.identifier isEqualToString:@"showColour"]){
+    PMSResultViewController *controller = (PMSResultViewController*)segue.destinationViewController;
+    controller.resultingColour =
+}
+}
+
+
 @end

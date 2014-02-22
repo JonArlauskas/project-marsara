@@ -91,7 +91,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LlZ-Yt-ZsP" kind="push" id="kVV-BW-gfm"/>
+                                    <segue destination="LlZ-Yt-ZsP" kind="push" identifier="showColour" id="kVV-BW-gfm"/>
                                 </connections>
                             </button>
                         </subviews>

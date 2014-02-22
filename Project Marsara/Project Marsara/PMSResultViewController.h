@@ -10,5 +10,6 @@
 
 @interface PMSResultViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *colorResultText;
+@property (nonatomic)NSString *resultingColour;
 
 @end

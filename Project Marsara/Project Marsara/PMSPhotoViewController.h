@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PMSResultViewController.h"
 
 @interface PMSPhotoViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)takePicture:(UIButton *)sender;
 - (IBAction)selectPicture:(UIButton *)sender;
+
+
 
 @end
