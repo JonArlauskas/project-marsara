@@ -71,15 +71,11 @@ using namespace cv;
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.imageView.image = chosenImage;
     
+    // OpenCV calculations for dominant color in image
     Mat src = [PMSOpenCVFunctions cvMatFromUIImage:chosenImage];
-    Mat HSV;
-    Mat threshold;
-    cvtColor(src,HSV,CV_BGR2HSV);
-    inRange(HSV,Scalar(106,60,90),Scalar(124,255,255),threshold);
-    UIImage *filteredImage = [PMSOpenCVFunctions UIImageFromCVMat:HSV];
-    
-    self.imageView.image = filteredImage;
+    Vec3d result = [PMSOpenCVFunctions findDominantColor:src];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     

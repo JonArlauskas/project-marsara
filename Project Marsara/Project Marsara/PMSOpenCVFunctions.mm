@@ -1,4 +1,5 @@
 #import "PMSOpenCVFunctions.h"
+using namespace cv;
 
 @implementation PMSOpenCVFunctions
 
@@ -81,5 +82,39 @@
     
     return finalImage;
 }
+
++ (cv::Vec3d)findDominantColor:(cv::Mat)input {
+    
+    // Split input into channels
+    vector<Mat> bgr_planes;
+    split(input, bgr_planes);
+    
+    /// Establish the number of bins
+    int histSize = 256;
+    
+    /// Set the ranges ( for B,G,R) )
+    float range[] = { 0, 256 } ;
+    const float* histRange = { range };
+    
+    bool uniform = true; bool accumulate = false;
+    
+    Mat b_hist, g_hist, r_hist;
+    
+    /// Compute the histograms:
+    calcHist( &bgr_planes[0], 1, 0, Mat(), b_hist, 1, &histSize, &histRange, uniform, accumulate );
+    calcHist( &bgr_planes[1], 1, 0, Mat(), g_hist, 1, &histSize, &histRange, uniform, accumulate );
+    calcHist( &bgr_planes[2], 1, 0, Mat(), r_hist, 1, &histSize, &histRange, uniform, accumulate );
+    
+    double b_maxVal, g_maxVal, r_maxVal;
+    minMaxLoc(b_hist, 0, &b_maxVal, 0, 0);
+    minMaxLoc(g_hist, 0, &g_maxVal, 0, 0);
+    minMaxLoc(r_hist, 0, &r_maxVal, 0, 0);
+    
+    Vec3d dominantColor = {b_maxVal/1000, g_maxVal/1000, r_maxVal/1000};
+    
+    return dominantColor;
+}
+
+
 
 @end
