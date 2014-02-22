@@ -28,6 +28,12 @@
                                                     otherButtonTitles: nil];
         [myAlertView show];
     }
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Hello!"
+                                                     message:@"Welcome to OpenCV"
+                                                    delegate:self
+                                           cancelButtonTitle:@"Continue"
+                                           otherButtonTitles:nil];
+    [alert show];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
