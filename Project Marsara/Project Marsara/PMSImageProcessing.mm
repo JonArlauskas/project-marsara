@@ -126,6 +126,26 @@
     return dominantColor;
 }
 
++ (double)findDominantColorHSV:(cv::Mat)input {
+    
+    cv::Mat hsv;
+    cvtColor(input, hsv, CV_BGR2HSV);
+    
+    std::vector<cv::Mat> channels;
+    cv::split(hsv, channels);
+    cv::Mat hue, hist;
+    hue = channels[0];
+    int histSize = 64;
+    float hranges[] = { 0, 180};
+    const float* ranges[] = { hranges };
+    
+    cv::calcHist(&hue, 1, 0, cv::Mat(), hist, 1, &histSize, ranges, true, false);
+    
+    double maxVal=0;
+    minMaxLoc(hist, 0, &maxVal, 0, 0);
+    return maxVal;
+}
+
 + (NSString *) rgbColorToName:(cv::Vec3d)input {
     
     //Set vector values to R,G,B

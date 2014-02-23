@@ -85,6 +85,7 @@
     // OpenCV calculations for dominant color in image
     cv::Mat src = [PMSImageProcessing cvMatFromUIImage:chosenImage];
     cv::Vec3d result = [PMSImageProcessing findDominantColor:src];
+    //double dblresult = [PMSImageProcessing findDominantColorHSV:src];
     self.inputColor = [PMSImageProcessing rgbColorToName:result];
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
