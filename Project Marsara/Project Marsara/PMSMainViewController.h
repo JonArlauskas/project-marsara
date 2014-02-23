@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PMSViewController : UIViewController
+@interface PMSMainViewController : UIViewController
 
 
 @end

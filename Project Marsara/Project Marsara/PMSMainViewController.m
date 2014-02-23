@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 theregime. All rights reserved.
 //
 
-#import "PMSViewController.h"
+#import "PMSMainViewController.h"
 
-@interface PMSViewController ()
+@interface PMSMainViewController ()
 
 @end
 
-@implementation PMSViewController
+@implementation PMSMainViewController
 
 - (void)viewDidLoad
 {

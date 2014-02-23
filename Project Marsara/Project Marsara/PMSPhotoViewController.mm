@@ -79,6 +79,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.fromImage = chosenImage;
     self.imageView.image = chosenImage;
     
     // OpenCV calculations for dominant color in image
@@ -129,6 +130,7 @@
         controller.resultingColour = self.inputColor;
         controller.fromItemType = self.fromItemType;
         controller.toItemType = self.toItemType;
+        controller.fromImage = self.fromImage;
     }
 }
 

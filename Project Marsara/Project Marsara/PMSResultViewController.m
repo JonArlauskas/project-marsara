@@ -40,4 +40,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
+- (IBAction)saveButton:(UIBarButtonItem *)sender {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    // Create a new managed object
+    NSManagedObject *newItem = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:context];
+    [newItem setValue:self.resultingColour forKey:@"color"];
+    [newItem setValue:self.fromItemType forKey:@"type"];
+    [newItem setValue:self.fromImage forKey:@"image"];
+    
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

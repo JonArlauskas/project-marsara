@@ -14,7 +14,7 @@
 		23E1B82618B8EC35000C376E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B82518B8EC35000C376E /* main.m */; };
 		23E1B82A18B8EC35000C376E /* PMSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B82918B8EC35000C376E /* PMSAppDelegate.m */; };
 		23E1B82D18B8EC35000C376E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E1B82B18B8EC35000C376E /* Main.storyboard */; };
-		23E1B83018B8EC35000C376E /* PMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B82F18B8EC35000C376E /* PMSViewController.m */; };
+		23E1B83018B8EC35000C376E /* PMSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B82F18B8EC35000C376E /* PMSMainViewController.m */; };
 		23E1B83218B8EC35000C376E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E1B83118B8EC35000C376E /* Images.xcassets */; };
 		23E1B83918B8EC36000C376E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B83818B8EC36000C376E /* XCTest.framework */; };
 		23E1B83A18B8EC36000C376E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B81918B8EC35000C376E /* Foundation.framework */; };
@@ -27,6 +27,10 @@
 		23E1B85818B926D4000C376E /* PMSImageProcessing.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85718B926D4000C376E /* PMSImageProcessing.mm */; };
 		23E1B85B18B9A797000C376E /* PMSOutfitRecommender.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85A18B9A797000C376E /* PMSOutfitRecommender.m */; };
 		23E1B85D18B9C294000C376E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B85C18B9C294000C376E /* CoreData.framework */; };
+		23E1B86018B9C493000C376E /* PMDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85E18B9C493000C376E /* PMDataModel.xcdatamodeld */; };
+		23E1B86318B9CE58000C376E /* PMSLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B86218B9CE58000C376E /* PMSLibraryViewController.m */; };
+		23E1B86618B9CEDB000C376E /* PMSLibraryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B86518B9CEDB000C376E /* PMSLibraryCell.m */; };
+		23E1B86918B9D4F3000C376E /* PMSCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B86818B9D4F3000C376E /* PMSCellViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +55,8 @@
 		23E1B82818B8EC35000C376E /* PMSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMSAppDelegate.h; sourceTree = "<group>"; };
 		23E1B82918B8EC35000C376E /* PMSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMSAppDelegate.m; sourceTree = "<group>"; };
 		23E1B82C18B8EC35000C376E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		23E1B82E18B8EC35000C376E /* PMSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMSViewController.h; sourceTree = "<group>"; };
-		23E1B82F18B8EC35000C376E /* PMSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMSViewController.m; sourceTree = "<group>"; };
+		23E1B82E18B8EC35000C376E /* PMSMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMSMainViewController.h; sourceTree = "<group>"; };
+		23E1B82F18B8EC35000C376E /* PMSMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMSMainViewController.m; sourceTree = "<group>"; };
 		23E1B83118B8EC35000C376E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		23E1B83718B8EC36000C376E /* Project MarsaraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project MarsaraTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E1B83818B8EC36000C376E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -69,6 +73,13 @@
 		23E1B85918B9A797000C376E /* PMSOutfitRecommender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSOutfitRecommender.h; sourceTree = "<group>"; };
 		23E1B85A18B9A797000C376E /* PMSOutfitRecommender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSOutfitRecommender.m; sourceTree = "<group>"; };
 		23E1B85C18B9C294000C376E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		23E1B85F18B9C493000C376E /* PMDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PMDataModel.xcdatamodel; sourceTree = "<group>"; };
+		23E1B86118B9CE58000C376E /* PMSLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSLibraryViewController.h; sourceTree = "<group>"; };
+		23E1B86218B9CE58000C376E /* PMSLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSLibraryViewController.m; sourceTree = "<group>"; };
+		23E1B86418B9CEDB000C376E /* PMSLibraryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSLibraryCell.h; sourceTree = "<group>"; };
+		23E1B86518B9CEDB000C376E /* PMSLibraryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSLibraryCell.m; sourceTree = "<group>"; };
+		23E1B86718B9D4F3000C376E /* PMSCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSCellViewController.h; sourceTree = "<group>"; };
+		23E1B86818B9D4F3000C376E /* PMSCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSCellViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +146,8 @@
 				23E1B82818B8EC35000C376E /* PMSAppDelegate.h */,
 				23E1B82918B8EC35000C376E /* PMSAppDelegate.m */,
 				23E1B82B18B8EC35000C376E /* Main.storyboard */,
-				23E1B82E18B8EC35000C376E /* PMSViewController.h */,
-				23E1B82F18B8EC35000C376E /* PMSViewController.m */,
+				23E1B82E18B8EC35000C376E /* PMSMainViewController.h */,
+				23E1B82F18B8EC35000C376E /* PMSMainViewController.m */,
 				23E1B83118B8EC35000C376E /* Images.xcassets */,
 				23E1B82018B8EC35000C376E /* Supporting Files */,
 				23E1B84E18B90621000C376E /* PMSPhotoViewController.h */,
@@ -147,6 +158,12 @@
 				23E1B85718B926D4000C376E /* PMSImageProcessing.mm */,
 				23E1B85918B9A797000C376E /* PMSOutfitRecommender.h */,
 				23E1B85A18B9A797000C376E /* PMSOutfitRecommender.m */,
+				23E1B86118B9CE58000C376E /* PMSLibraryViewController.h */,
+				23E1B86218B9CE58000C376E /* PMSLibraryViewController.m */,
+				23E1B86418B9CEDB000C376E /* PMSLibraryCell.h */,
+				23E1B86518B9CEDB000C376E /* PMSLibraryCell.m */,
+				23E1B86718B9D4F3000C376E /* PMSCellViewController.h */,
+				23E1B86818B9D4F3000C376E /* PMSCellViewController.m */,
 			);
 			path = "Project Marsara";
 			sourceTree = "<group>";
@@ -154,6 +171,7 @@
 		23E1B82018B8EC35000C376E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				23E1B85E18B9C493000C376E /* PMDataModel.xcdatamodeld */,
 				23E1B82118B8EC35000C376E /* Project Marsara-Info.plist */,
 				23E1B82218B8EC35000C376E /* InfoPlist.strings */,
 				23E1B82518B8EC35000C376E /* main.m */,
@@ -278,11 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E1B86018B9C493000C376E /* PMDataModel.xcdatamodeld in Sources */,
 				23E1B85018B90621000C376E /* PMSPhotoViewController.mm in Sources */,
 				23E1B85818B926D4000C376E /* PMSImageProcessing.mm in Sources */,
 				23E1B82618B8EC35000C376E /* main.m in Sources */,
-				23E1B83018B8EC35000C376E /* PMSViewController.m in Sources */,
+				23E1B86618B9CEDB000C376E /* PMSLibraryCell.m in Sources */,
+				23E1B86918B9D4F3000C376E /* PMSCellViewController.m in Sources */,
+				23E1B83018B8EC35000C376E /* PMSMainViewController.m in Sources */,
 				23E1B85B18B9A797000C376E /* PMSOutfitRecommender.m in Sources */,
+				23E1B86318B9CE58000C376E /* PMSLibraryViewController.m in Sources */,
 				23E1B82A18B8EC35000C376E /* PMSAppDelegate.m in Sources */,
 				23E1B85318B920E8000C376E /* PMSResultViewController.m in Sources */,
 			);
@@ -511,6 +533,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		23E1B85E18B9C493000C376E /* PMDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				23E1B85F18B9C493000C376E /* PMDataModel.xcdatamodel */,
+			);
+			currentVersion = 23E1B85F18B9C493000C376E /* PMDataModel.xcdatamodel */;
+			path = PMDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 23E1B80E18B8EC35000C376E /* Project object */;
 }
