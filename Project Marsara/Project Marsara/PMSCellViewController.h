@@ -10,6 +10,7 @@
 
 @interface PMSCellViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *itemImageView;
-@property (weak, nonatomic) IBOutlet UILabel *itemDescription;
+@property (weak, nonatomic) IBOutlet UILabel *itemDescriptionLabel;
+@property (nonatomic) NSManagedObject *item;
 
 @end

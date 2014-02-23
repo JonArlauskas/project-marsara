@@ -194,12 +194,24 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nV9-gZ-20V">
+                                <rect key="frame" x="48" y="484" width="228" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Get Recommendations">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getRecommendations:" destination="0Hg-vU-Ilx" eventType="touchUpInside" id="t0P-ms-EYQ"/>
+                                    <segue destination="LlZ-Yt-ZsP" kind="push" id="zqr-lC-JaO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Uxz-jI-gxV"/>
                     <connections>
-                        <outlet property="itemDescription" destination="RNp-7m-uvE" id="PJk-0e-odL"/>
+                        <outlet property="itemDescriptionLabel" destination="RNp-7m-uvE" id="6kz-CO-Ur4"/>
                         <outlet property="itemImageView" destination="qKd-TA-Xuh" id="liq-nR-Obw"/>
                     </connections>
                 </viewController>
@@ -261,4 +273,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="zqr-lC-JaO"/>
+    </inferredMetricsTieBreakers>
 </document>

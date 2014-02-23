@@ -56,7 +56,8 @@
     NSManagedObject *newItem = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:context];
     [newItem setValue:self.resultingColour forKey:@"color"];
     [newItem setValue:self.fromItemType forKey:@"type"];
-    [newItem setValue:self.fromImage forKey:@"image"];
+    
+    [newItem setValue:UIImagePNGRepresentation(self.fromImage) forKey:@"image"];
     
     NSError *error = nil;
     // Save the object to persistent store

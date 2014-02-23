@@ -8,6 +8,7 @@
 
 #import "PMSLibraryViewController.h"
 #import "PMSLibraryCell.h"
+#import "PMSCellViewController.h"
 
 @interface PMSLibraryViewController ()
 
@@ -43,9 +44,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     PMSLibraryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LibCell" forIndexPath:indexPath];
-    //cell.imageView.image = [UIImage imageNamed:self.truckImages[0]];
-    UIImage *itemImage = [[UIImage alloc] init];
-    itemImage = [UIImage imageNamed:[self.items objectAtIndex:indexPath.row]];
+    UIImage *itemImage = [UIImage imageWithData:[[self.items objectAtIndex:indexPath.row] valueForKey:@"image"]];
     cell.cellImageView.image = itemImage;
     return cell;
 }
@@ -61,8 +60,7 @@
     return context;
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     // Fetch the devices from persistent data store
@@ -71,6 +69,17 @@
     self.items = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     [self.collectionView reloadData];
+}
+
+#pragma mark - Prepare for Segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UICollectionViewCell *cell = (UICollectionViewCell *)sender;
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    
+    PMSCellViewController *cellViewController = (PMSCellViewController *)segue.destinationViewController;
+    cellViewController.item = [self.items objectAtIndex:indexPath.row];
 }
 
 @end
