@@ -14,8 +14,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *colorResult;
 @property (nonatomic) NSString *resultingColour;
 @property (nonatomic) NSString *fromItemType;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 @property (nonatomic) NSString *toItemType;
 @property (nonatomic) UIImage *fromImage;
+@property (nonatomic) BOOL displaySaveButton;
 @property (weak, nonatomic) IBOutlet UILabel *recommendOutput;
 - (IBAction)saveButton:(UIBarButtonItem *)sender;
 

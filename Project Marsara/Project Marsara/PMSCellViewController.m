@@ -76,6 +76,8 @@
     // Get current value of picker
     NSInteger row = [self.itemTypePicker selectedRowInComponent:0];
     controller.toItemType = [self.itemTypeArray objectAtIndex:row];
+    // Because we are coming from Library disable save button in result view
+    controller.displaySaveButton = NO;
 }
 
 @end
