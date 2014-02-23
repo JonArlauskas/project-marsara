@@ -154,6 +154,8 @@
         color = @"Brown";
     } else if ((r<=(g+5) && r>=(g-5)) && ((r<=(b+5) && g>=(b-5)) && ((b<=(r+5)) && (b>=(r-5))))){
         color = @"Gray";
+    } else {
+        color = @"Brown";
     }
     return color;
 }
