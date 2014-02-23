@@ -168,7 +168,7 @@
         color = @"Orange";
     } else if (r>=240 && g>=240 && b>=240){
         color = @"White";
-    } else if (r==0 && b==0 && g==0){
+    } else if (r<=35 && b<=35 && g<=35){
         color = @"Black";
     } else if (r>g>b && (r-50)>g && (g-50)>b){
         color = @"Brown";
