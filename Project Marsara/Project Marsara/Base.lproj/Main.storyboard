@@ -278,6 +278,7 @@
                     <connections>
                         <outlet property="colorResult" destination="aFs-q9-vWq" id="8KR-8G-GAm"/>
                         <outlet property="recommendOutput" destination="eTC-rQ-ajo" id="0jD-EL-ld7"/>
+                        <outlet property="saveButton" destination="6J4-ky-Ohc" id="faz-Gt-P6l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obz-95-ywq" userLabel="First Responder" sceneMemberID="firstResponder"/>
