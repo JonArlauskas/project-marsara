@@ -84,7 +84,7 @@
     // OpenCV calculations for dominant color in image
     cv::Mat src = [PMSImageProcessing cvMatFromUIImage:chosenImage];
     cv::Vec3d result = [PMSImageProcessing findDominantColor:src];
-    
+    self.inputColor = [PMSImageProcessing rgbColorToName:result];
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
     // Enable get recommendations button
@@ -126,7 +126,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"showColour"]){
         PMSResultViewController *controller = (PMSResultViewController *)segue.destinationViewController;
-        controller.resultingColour = @"Blue";
+        controller.resultingColour = self.inputColor;
         controller.fromItemType = self.fromItemType;
         controller.toItemType = self.toItemType;
     }

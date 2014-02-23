@@ -26,6 +26,7 @@
 		23E1B85518B92280000C376E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B85418B92280000C376E /* opencv2.framework */; };
 		23E1B85818B926D4000C376E /* PMSImageProcessing.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85718B926D4000C376E /* PMSImageProcessing.mm */; };
 		23E1B85B18B9A797000C376E /* PMSOutfitRecommender.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85A18B9A797000C376E /* PMSOutfitRecommender.m */; };
+		23E1B85D18B9C294000C376E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B85C18B9C294000C376E /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		23E1B85718B926D4000C376E /* PMSImageProcessing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PMSImageProcessing.mm; sourceTree = "<group>"; };
 		23E1B85918B9A797000C376E /* PMSOutfitRecommender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSOutfitRecommender.h; sourceTree = "<group>"; };
 		23E1B85A18B9A797000C376E /* PMSOutfitRecommender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSOutfitRecommender.m; sourceTree = "<group>"; };
+		23E1B85C18B9C294000C376E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E1B85D18B9C294000C376E /* CoreData.framework in Frameworks */,
 				23E1B85518B92280000C376E /* opencv2.framework in Frameworks */,
 				23E1B81C18B8EC35000C376E /* CoreGraphics.framework in Frameworks */,
 				23E1B81E18B8EC35000C376E /* UIKit.framework in Frameworks */,
@@ -116,6 +119,7 @@
 		23E1B81818B8EC35000C376E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23E1B85C18B9C294000C376E /* CoreData.framework */,
 				23E1B85418B92280000C376E /* opencv2.framework */,
 				23E1B81918B8EC35000C376E /* Foundation.framework */,
 				23E1B81B18B8EC35000C376E /* CoreGraphics.framework */,

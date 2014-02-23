@@ -126,35 +126,36 @@
     return dominantColor;
 }
 
-+ (NSString *) rgbColor:(cv::Vec3d){
++ (NSString *) rgbColorToName:(cv::Vec3d)input {
     
     //Set vector values to R,G,B
-    double r = cv::Vec3d[0]
-    double g = cv::Vec3d[1]
-    double b = cv::Vec3d[2]
+    double r = input[0];
+    double g = input[1];
+    double b = input[2];
     
-    
-    if(b>=150 && R<=50 && G<=50){
-        return NSString = "Blue"
+    NSString *color;
+    if(b>=150 && r<=50 && g<=50){
+        color = @"Blue";
     } else if(r>=180 && g<=40 && b<=40){
-        return NSString = "Red"
+        color = @"Red";
     } else if(r>=190 && g>=190 && b<=100){
-        return NSString = "Yellow"
-    } else if ((r>b-10)||(b>r-10)) && ((b>g+20 || r>g+20)){
-        return NSString = "Purple"
+        color = @"Yellow";
+    } else if (((r>b-10)||(b>r-10)) && ((b>g+20 || r>g+20))){
+        color = @"Purple";
     } else if (g>=100 && b<=50 && r<=50){
-        return NSString = "Green"
+        color = @"Green";
     } else if (r>=200 && g>=200 && g<=100 && b>=60){
-        return NSString ="Orange"
+        color = @"Orange";
     } else if (r>=240 && g>=240 && b>=240){
-        return NSString = "White"
+        color = @"White";
     } else if (r==0 && b==0 && g==0){
-        return NSString = "Black"
+        color = @"Black";
     } else if (r>g>b && (r-50)>g && (g-50)>b){
-        return NSString = "Brown"
-    } else if (((r<=(g+5) && r>=(g-5)) && ((r<=(b+5) && g>=(b-5)) && ((b<=(r+5)) && (b>=(r-5)))){
-        return NSString = "Gray"
+        color = @"Brown";
+    } else if ((r<=(g+5) && r>=(g-5)) && ((r<=(b+5) && g>=(b-5)) && ((b<=(r+5)) && (b>=(r-5))))){
+        color = @"Gray";
     }
+    return color;
 }
 
 

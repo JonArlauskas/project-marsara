@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *getRecommendations;
 @property (strong, nonatomic) NSString *fromItemType;
 @property (strong, nonatomic) NSString *toItemType;
+@property (strong, nonatomic) NSString *inputColor;
 - (IBAction)takePicture:(UIButton *)sender;
 - (IBAction)selectPicture:(UIButton *)sender;
 - (IBAction)getRecommendations:(UIButton *)sender;
