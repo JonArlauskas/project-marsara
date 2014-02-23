@@ -12,5 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *itemImageView;
 @property (weak, nonatomic) IBOutlet UILabel *itemDescriptionLabel;
 @property (nonatomic) NSManagedObject *item;
+@property (strong, nonatomic) NSArray *itemTypeArray;
+@property (weak, nonatomic) IBOutlet UIPickerView *itemTypePicker;
 
 @end
