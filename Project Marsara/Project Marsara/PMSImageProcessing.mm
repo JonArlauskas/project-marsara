@@ -1,3 +1,11 @@
+//
+//  PMSImageProcessing.h
+//  Project Marsara
+//
+//  Created by Nicolas Langley on 2/22/14.
+//  Copyright (c) 2014 theregime. All rights reserved.
+//
+
 #import "PMSImageProcessing.h"
 
 @implementation PMSImageProcessing
@@ -92,10 +100,10 @@
     cv::vector<cv::Mat> bgr_planes;
     split(input, bgr_planes);
     
-    /// Establish the number of bins
+    // Establish the number of bins
     int histSize = 256;
     
-    /// Set the ranges ( for B,G,R) )
+    // Set the ranges ( for B,G,R) )
     float range[] = { 0, 256 } ;
     const float* histRange = { range };
     
@@ -103,7 +111,7 @@
     
     cv::Mat b_hist, g_hist, r_hist;
     
-    /// Compute the histograms:
+    // Compute the histograms:
     calcHist( &bgr_planes[0], 1, 0, cv::Mat(), b_hist, 1, &histSize, &histRange, uniform, accumulate );
     calcHist( &bgr_planes[1], 1, 0, cv::Mat(), g_hist, 1, &histSize, &histRange, uniform, accumulate );
     calcHist( &bgr_planes[2], 1, 0, cv::Mat(), r_hist, 1, &histSize, &histRange, uniform, accumulate );

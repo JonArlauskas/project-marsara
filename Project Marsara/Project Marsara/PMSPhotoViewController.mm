@@ -29,12 +29,11 @@
                                                     otherButtonTitles: nil];
         [myAlertView show];
     }
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Hello!"
-                                                     message:@"Welcome to OpenCV"
-                                                    delegate:self
-                                           cancelButtonTitle:@"Continue"
-                                           otherButtonTitles:nil];
-    [alert show];
+    // Initialize array for item types
+    self.itemTypeArray  = [[NSArray alloc] initWithObjects:@"Overwear",@"Shirt",@"Bottom",@"Shoes",nil];
+    // Start recommendations button as disabled and hidden
+    self.getRecommendations.enabled = NO;
+    self.getRecommendations.hidden = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -65,6 +64,16 @@
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
+- (IBAction)getRecommendations:(UIButton *)sender {
+    // Get current value of picker
+    NSInteger firstRow = [self.itemTypePicker selectedRowInComponent:0];
+    NSInteger secondRow = [self.itemTypePicker selectedRowInComponent:1];
+    self.fromItemType = [self.itemTypeArray objectAtIndex:firstRow];
+    self.toItemType = [self.itemTypeArray objectAtIndex:secondRow];
+}
+
+
+
 #pragma mark - Image Picker Controller delegate methods
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -78,6 +87,10 @@
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
+    // Enable get recommendations button
+    self.getRecommendations.enabled = YES;
+    self.getRecommendations.hidden = NO;
+    
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -86,13 +99,37 @@
     
 }
 
+#pragma mark - Picker View Data Source methods
+
+// returns the number of 'columns' to display.
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 2;
+}
+
+// returns the # of rows in each component
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component {
+    return 4;
+}
+
+#pragma mark - Picker View delegate methods
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [self.itemTypeArray objectAtIndex:row];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+}
+
+#pragma mark - Function for handling segue actions
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"showColour"]){
         PMSResultViewController *controller = (PMSResultViewController *)segue.destinationViewController;
-        // TODO: need method to convert color to string
         controller.resultingColour = @"Blue";
+        controller.fromItemType = self.fromItemType;
+        controller.toItemType = self.toItemType;
     }
 }
-
 
 @end

@@ -1,4 +1,10 @@
-#import <UIKit/UIKit.h>
+//
+//  PMSImageProcessing.h
+//  Project Marsara
+//
+//  Created by Nicolas Langley on 2/22/14.
+//  Copyright (c) 2014 theregime. All rights reserved.
+//
 
 @interface PMSImageProcessing : NSObject
 

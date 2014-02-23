@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PMSOutfitRecommender.h"
 
 @interface PMSResultViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *colorResultText;
+
+@property (weak, nonatomic) IBOutlet UILabel *colorResult;
 @property (nonatomic) NSString *resultingColour;
+@property (nonatomic) NSString *fromItemType;
+@property (nonatomic) NSString *toItemType;
+@property (weak, nonatomic) IBOutlet UILabel *recommendOutput;
 
 @end

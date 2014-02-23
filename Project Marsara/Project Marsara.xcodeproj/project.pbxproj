@@ -25,6 +25,7 @@
 		23E1B85318B920E8000C376E /* PMSResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85218B920E8000C376E /* PMSResultViewController.m */; };
 		23E1B85518B92280000C376E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B85418B92280000C376E /* opencv2.framework */; };
 		23E1B85818B926D4000C376E /* PMSImageProcessing.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85718B926D4000C376E /* PMSImageProcessing.mm */; };
+		23E1B85B18B9A797000C376E /* PMSOutfitRecommender.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85A18B9A797000C376E /* PMSOutfitRecommender.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		23E1B85418B92280000C376E /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		23E1B85618B926B2000C376E /* PMSImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSImageProcessing.h; sourceTree = "<group>"; };
 		23E1B85718B926D4000C376E /* PMSImageProcessing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PMSImageProcessing.mm; sourceTree = "<group>"; };
+		23E1B85918B9A797000C376E /* PMSOutfitRecommender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSOutfitRecommender.h; sourceTree = "<group>"; };
+		23E1B85A18B9A797000C376E /* PMSOutfitRecommender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSOutfitRecommender.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 				23E1B85218B920E8000C376E /* PMSResultViewController.m */,
 				23E1B85618B926B2000C376E /* PMSImageProcessing.h */,
 				23E1B85718B926D4000C376E /* PMSImageProcessing.mm */,
+				23E1B85918B9A797000C376E /* PMSOutfitRecommender.h */,
+				23E1B85A18B9A797000C376E /* PMSOutfitRecommender.m */,
 			);
 			path = "Project Marsara";
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				23E1B85818B926D4000C376E /* PMSImageProcessing.mm in Sources */,
 				23E1B82618B8EC35000C376E /* main.m in Sources */,
 				23E1B83018B8EC35000C376E /* PMSViewController.m in Sources */,
+				23E1B85B18B9A797000C376E /* PMSOutfitRecommender.m in Sources */,
 				23E1B82A18B8EC35000C376E /* PMSAppDelegate.m in Sources */,
 				23E1B85318B920E8000C376E /* PMSResultViewController.m in Sources */,
 			);

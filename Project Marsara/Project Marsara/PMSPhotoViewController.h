@@ -9,11 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "PMSResultViewController.h"
 
-@interface PMSPhotoViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface PMSPhotoViewController : UIViewController <UIImagePickerControllerDelegate,
+                                                      UINavigationControllerDelegate,
+                                                      UIPickerViewDataSource,
+                                                      UIPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIPickerView *itemTypePicker;
+@property (strong, nonatomic) NSArray *itemTypeArray;
+@property (weak, nonatomic) IBOutlet UIButton *getRecommendations;
+@property (strong, nonatomic) NSString *fromItemType;
+@property (strong, nonatomic) NSString *toItemType;
 - (IBAction)takePicture:(UIButton *)sender;
 - (IBAction)selectPicture:(UIButton *)sender;
+- (IBAction)getRecommendations:(UIButton *)sender;
 
 
 
