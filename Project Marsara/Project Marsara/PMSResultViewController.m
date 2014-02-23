@@ -32,10 +32,6 @@
     [self.colorResult setTextAlignment:NSTextAlignmentCenter];
     NSString *recommendText = [PMSOutfitRecommender generateOutfit:self.resultingColour toItemType:self.toItemType];
     [self.recommendOutput setText:recommendText];
-    if (self.displaySaveButton == NO) {
-        self.saveButton.enabled = NO;
-    }
-    
 }
 
 - (void)didReceiveMemoryWarning {

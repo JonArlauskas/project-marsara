@@ -19,7 +19,7 @@
             </objects>
             <point key="canvasLocation" x="-1035" y="-31"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Main View Controller - Project Marsara-->
         <scene sceneID="ARx-RG-C1G">
             <objects>
                 <viewController id="FKX-eS-rqb" customClass="PMSMainViewController" sceneMemberID="viewController">
@@ -37,13 +37,6 @@
                                     <segue destination="0Hg-vU-Ilx" kind="push" id="A94-nC-LLt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Marsara" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cKK-jJ-2Br">
-                                <rect key="frame" x="98" y="104" width="124" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rsq-xk-Dwr">
                                 <rect key="frame" x="92" y="266" width="136" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -65,7 +58,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Sqt-SV-1Pi"/>
+                    <navigationItem key="navigationItem" title="Project Marsara" id="Sqt-SV-1Pi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y72-MA-NxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,7 +130,7 @@
             </objects>
             <point key="canvasLocation" x="166" y="-441"/>
         </scene>
-        <!--Library View Controller-->
+        <!--Library View Controller - My Closet-->
         <scene sceneID="fuL-CC-kUX">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="mJT-7K-nM8" customClass="PMSLibraryViewController" sceneMemberID="viewController">
@@ -177,7 +170,7 @@
                             <outlet property="delegate" destination="mJT-7K-nM8" id="h4l-Su-ZLw"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="ENf-jZ-m8I"/>
+                    <navigationItem key="navigationItem" title="My Closet" id="ENf-jZ-m8I"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYE-OP-3NK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -236,7 +229,7 @@
             </objects>
             <point key="canvasLocation" x="741" y="580"/>
         </scene>
-        <!--Result View Controller-->
+        <!--Result View Controller - Recommendations-->
         <scene sceneID="z3E-HD-YTQ">
             <objects>
                 <viewController id="LlZ-Yt-ZsP" customClass="PMSResultViewController" sceneMemberID="viewController">
@@ -245,14 +238,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inputed clothing item" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aFs-q9-vWq">
-                                <rect key="frame" x="40" y="168" width="240" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Recommendations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FVg-4o-3C9">
-                                <rect key="frame" x="40" y="80" width="240" height="44"/>
+                                <rect key="frame" x="40" y="114" width="240" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -268,8 +254,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="byz-On-i6R">
-                        <barButtonItem key="rightBarButtonItem" title="I Own This" id="6J4-ky-Ohc">
+                    <navigationItem key="navigationItem" title="Recommendations" id="byz-On-i6R">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="6J4-ky-Ohc">
                             <connections>
                                 <action selector="saveButton:" destination="LlZ-Yt-ZsP" id="T3x-Ut-ANn"/>
                             </connections>
