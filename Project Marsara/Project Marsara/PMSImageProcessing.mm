@@ -126,6 +126,37 @@
     return dominantColor;
 }
 
++ (NSString *) rgbColor:(cv::Vec3d){
+    
+    //Set vector values to R,G,B
+    double r = cv::Vec3d[0]
+    double g = cv::Vec3d[1]
+    double b = cv::Vec3d[2]
+    
+    
+    if(b>=150 && R<=50 && G<=50){
+        return NSString = "Blue"
+    } else if(r>=180 && g<=40 && b<=40){
+        return NSString = "Red"
+    } else if(r>=190 && g>=190 && b<=100){
+        return NSString = "Yellow"
+    } else if ((r>b-10)||(b>r-10)) && ((b>g+20 || r>g+20)){
+        return NSString = "Purple"
+    } else if (g>=100 && b<=50 && r<=50){
+        return NSString = "Green"
+    } else if (r>=200 && g>=200 && g<=100 && b>=60){
+        return NSString ="Orange"
+    } else if (r>=240 && g>=240 && b>=240){
+        return NSString = "White"
+    } else if (r==0 && b==0 && g==0){
+        return NSString = "Black"
+    } else if (r>g>b && (r-50)>g && (g-50)>b){
+        return NSString = "Brown"
+    } else if (((r<=(g+5) && r>=(g-5)) && ((r<=(b+5) && g>=(b-5)) && ((b<=(r+5)) && (b>=(r-5)))){
+        return NSString = "Gray"
+    }
+}
+
 
 
 @end
