@@ -134,15 +134,15 @@
     double b = input[2];
     
     NSString *color;
-    if(b>=150 && r<=50 && g<=50){
+    if((b>g>r) && (b>= 128 && b<=255 && g<=255 && r<=255){
         color = @"Blue";
-    } else if(r>=180 && g<=40 && b<=40){
+    } else if((r>g>b) && (r>=128 && r<=255 && g<=255 && b<=255)){
         color = @"Red";
     } else if(r>=190 && g>=190 && b<=100){
         color = @"Yellow";
     } else if (((r>b-10)||(b>r-10)) && ((b>g+20 || r>g+20))){
         color = @"Purple";
-    } else if (g>=100 && b<=50 && r<=50){
+    } else if ((g>b>r) && (g>= 128 && g<=255 && b<=255 && r<=255){
         color = @"Green";
     } else if (r>=200 && g>=200 && g<=100 && b>=60){
         color = @"Orange";
@@ -154,6 +154,8 @@
         color = @"Brown";
     } else if ((r<=(g+5) && r>=(g-5)) && ((r<=(b+5) && g>=(b-5)) && ((b<=(r+5)) && (b>=(r-5))))){
         color = @"Gray";
+    } else {
+        color = @"Brown";
     }
     return color;
 }
