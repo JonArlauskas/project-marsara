@@ -246,6 +246,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = theregime;
 				TargetAttributes = {
+					23E1B81518B8EC35000C376E = {
+						DevelopmentTeam = BZR6QG74H5;
+					};
 					23E1B83618B8EC36000C376E = {
 						TestTargetID = 23E1B81518B8EC35000C376E;
 					};
@@ -433,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/nicolaslangley/Development/Xcode\\ Projects/project-marsara/Project\\ Marsara",
@@ -450,6 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/nicolaslangley/Development/Xcode\\ Projects/project-marsara/Project\\ Marsara",
@@ -523,6 +528,7 @@
 				23E1B84A18B8EC36000C376E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23E1B84B18B8EC36000C376E /* Build configuration list for PBXNativeTarget "Project MarsaraTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +537,7 @@
 				23E1B84D18B8EC36000C376E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
