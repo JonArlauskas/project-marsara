@@ -143,7 +143,51 @@
     return dominantColorVec;
 }
 
+
 + (NSString *) rgbColorToName:(cv::Vec3d)input {
+    // Initialize set of colors
+    NSDictionary *colorSet = @{@"Blue"  : [NSArray arrayWithObjects: @0, @0, @255, nil],
+                               @"Red"   : [NSArray arrayWithObjects: @255, @0, @0, nil],
+                               @"Green" : [NSArray arrayWithObjects: @0, @255, @0, nil],
+                               @"White" : [NSArray arrayWithObjects: @255, @255, @255, nil],
+                               @"Black" : [NSArray arrayWithObjects: @0, @0, @0, nil],
+                               @"Orange": [NSArray arrayWithObjects: @255, @165, @0, nil],
+                               @"Purple": [NSArray arrayWithObjects: @128, @0, @128, nil],
+                               @"Yellow": [NSArray arrayWithObjects: @255, @255, @0, nil]};
+    
+    // Init containers
+    NSMutableDictionary *minColors = [[NSMutableDictionary alloc]init];;
+    NSMutableArray *colorValues = [[NSMutableArray alloc]init];;
+    
+    // Create color set of colors using euclidean distance
+    for (NSString *key in colorSet) {
+        int rd, gd, bd;
+        NSArray *curColor = [colorSet objectForKey:key];
+        rd = (int)pow((double)([curColor[0] intValue] - input[0]), (double)2);
+        gd = (int)pow((double)([curColor[1] intValue] - input[1]), (double)2);
+        bd = (int)pow((double)([curColor[2] intValue] - input[2]), (double)2);
+        int colorSum = rd + gd + bd;
+        NSNumber *colorSumObj = [NSNumber numberWithInt:colorSum];
+        [colorValues addObject:colorSumObj];
+        [minColors setValue:key forKey:[NSString stringWithFormat:@"%d", colorSum]];
+    }
+    
+    // Sort values
+    NSArray *sortedColorValues = [colorValues sortedArrayUsingComparator:^(id obj1, id obj2) {
+        if ([obj1 integerValue] > [obj2 integerValue])
+            return (NSComparisonResult)NSOrderedDescending;
+        if ([obj1 integerValue] < [obj2 integerValue])
+            return (NSComparisonResult)NSOrderedAscending;
+        return (NSComparisonResult)NSOrderedSame;
+    }];
+    
+    // Return minimum color value - closest match
+    NSNumber *minVal = sortedColorValues[0];
+    NSString *colorName = [minColors objectForKey:[NSString stringWithFormat:@"%d", [minVal intValue]]];
+    return colorName;
+}
+
++ (NSString *) rgbColorToName2:(cv::Vec3d)input {
     
     //Set vector values to R,G,B
     double r = input[2];

@@ -11,11 +11,14 @@
 @implementation PMSOutfitRecommender
 
 + (NSString *)generateOutfit:(NSString *)color toItemType:(NSString *)toItemType {
-    NSDictionary* complementaryColors = @{@"Blue": @"Orange",
+    NSDictionary* complementaryColors = @{@"Blue"   : @"Orange",
+                                          @"Orange" : @"Blue",
                                           @"Purple" : @"Yellow",
-                                          @"Red" : @"Green",
-                                          @"Brown" : @"Blue",
-                                          @"Black" : @"White"};
+                                          @"Yellow" : @"Purple",
+                                          @"Red"    : @"Green",
+                                          @"Green"  : @"Red",
+                                          @"White"  : @"Any neutral color",
+                                          @"Black"  : @"White"};
     NSString *matchingColor = [complementaryColors objectForKey:color];
     
     NSString *recommendation;
