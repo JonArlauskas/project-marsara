@@ -13,6 +13,5 @@
 + (UIImage *)UIImageFromCVMat:(cv::Mat)cvMat;
 + (cv::Vec3d)findDominantColor:(cv::Mat)input;
 + (NSString *) rgbColorToName:(cv::Vec3d)input;
-+ (double)findDominantColorHSV:(cv::Mat)input;
 
 @end

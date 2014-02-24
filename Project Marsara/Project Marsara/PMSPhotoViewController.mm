@@ -85,7 +85,9 @@
     // OpenCV calculations for dominant color in image
     cv::Mat src = [PMSImageProcessing cvMatFromUIImage:chosenImage];
     cv::Vec3d result = [PMSImageProcessing findDominantColor:src];
-    //double dblresult = [PMSImageProcessing findDominantColorHSV:src];
+    self.TestLabel.text = [NSString stringWithFormat:
+                           @"R: %f G: %f B: %f",
+                           result[0], result[1], result[2]];
     self.inputColor = [PMSImageProcessing rgbColorToName:result];
     [picker dismissViewControllerAnimated:YES completion:NULL];
     

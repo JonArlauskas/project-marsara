@@ -105,7 +105,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HfH-pQ-2TW">
-                                <rect key="frame" x="46" y="462" width="228" height="30"/>
+                                <rect key="frame" x="46" y="437" width="228" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Get Recommendations">
@@ -116,11 +116,19 @@
                                     <segue destination="LlZ-Yt-ZsP" kind="push" identifier="showColour" id="Ity-69-uU7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TestLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kyx-oT-Zg2">
+                                <rect key="frame" x="12" y="484" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ENr-oI-GKi"/>
                     <connections>
+                        <outlet property="TestLabel" destination="Kyx-oT-Zg2" id="fIc-lH-mHz"/>
                         <outlet property="getRecommendations" destination="HfH-pQ-2TW" id="k7T-bz-oOk"/>
                         <outlet property="imageView" destination="nS0-ac-1HY" id="yTK-ER-I0m"/>
                         <outlet property="itemTypePicker" destination="Hfw-Jl-yU6" id="dtV-pT-MUj"/>
@@ -283,6 +291,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zqr-lC-JaO"/>
+        <segue reference="Ity-69-uU7"/>
     </inferredMetricsTieBreakers>
 </document>

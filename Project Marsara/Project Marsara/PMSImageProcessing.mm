@@ -96,62 +96,59 @@
 
 + (cv::Vec3d)findDominantColor:(cv::Mat)input {
     
-    // Split input into channels
-    cv::vector<cv::Mat> bgr_planes;
-    split(input, bgr_planes);
+    cv::Mat src = input.clone();
+    // Map the src to the samples    
+    std::vector<cv::Mat> imgRGB;
+    cv::split(src,imgRGB);
+    int n = src.total();
+    cv::Mat samples(n,3,CV_8U);
+    for(int i=0;i!=3;++i)
+        imgRGB[i].reshape(1,n).copyTo(samples.col(i));
+    samples.convertTo(samples,CV_32F);
     
-    // Establish the number of bins
-    int histSize = 256;
+    // Apply K-means to find labels and centers
+    int clusterCount = 2;
+    cv::Mat labels;
+    int attempts = 5;
+    cv::Mat centers;
+    cv::kmeans(samples, clusterCount, labels,
+               cv::TermCriteria(CV_TERMCRIT_ITER | CV_TERMCRIT_EPS,
+                                10, 0.01),
+               attempts, cv::KMEANS_PP_CENTERS, centers);
     
-    // Set the ranges ( for B,G,R) )
-    float range[] = { 0, 256 } ;
-    const float* histRange = { range };
+    // Find dominant color by computing histogram of labels
+    int nbins = 3; // lets hold 256 levels
+    int hsize[] = { nbins }; // just one dimension
+    float range[] = { 0, 2 };
+    const float *ranges[] = { range };
+    int chnls[] = {0};
+    cv::Mat hist;
+    labels.convertTo(labels,CV_32F);
+    calcHist(&labels, 1, chnls, cv::Mat(),hist,1,hsize,ranges);
+    int max = hist.row(0).at<int>(0);
+    int maxIndex = 0;
+    for (int i = 1; i < 3; i++) {
+        int curVal = hist.row(i).at<int>(0);
+        if (curVal > max) {
+            max = curVal;
+            maxIndex = i;
+        }
+    }
+    cv::Mat dominantColor = centers.row(maxIndex);
+    cv::Vec3d dominantColorVec;
+    dominantColorVec[0] = (double)dominantColor.col(0).at<float>(0);
+    dominantColorVec[1] = (double)dominantColor.col(1).at<float>(0);
+    dominantColorVec[2] = (double)dominantColor.col(2).at<float>(0);
     
-    bool uniform = true; bool accumulate = false;
-    
-    cv::Mat b_hist, g_hist, r_hist;
-    
-    // Compute the histograms:
-    calcHist( &bgr_planes[0], 1, 0, cv::Mat(), b_hist, 1, &histSize, &histRange, uniform, accumulate );
-    calcHist( &bgr_planes[1], 1, 0, cv::Mat(), g_hist, 1, &histSize, &histRange, uniform, accumulate );
-    calcHist( &bgr_planes[2], 1, 0, cv::Mat(), r_hist, 1, &histSize, &histRange, uniform, accumulate );
-    
-    double b_maxVal, g_maxVal, r_maxVal;
-    minMaxLoc(b_hist, 0, &b_maxVal, 0, 0);
-    minMaxLoc(g_hist, 0, &g_maxVal, 0, 0);
-    minMaxLoc(r_hist, 0, &r_maxVal, 0, 0);
-    
-    cv::Vec3d dominantColor = {b_maxVal/1000, g_maxVal/1000, r_maxVal/1000};
-    
-    return dominantColor;
-}
-
-+ (double)findDominantColorHSV:(cv::Mat)input {
-    
-    cv::Mat hsv;
-    cvtColor(input, hsv, CV_BGR2HSV);
-    
-    std::vector<cv::Mat> channels;
-    cv::split(hsv, channels);
-    cv::Mat hue, hist;
-    hue = channels[0];
-    int histSize = 64;
-    float hranges[] = { 0, 180};
-    const float* ranges[] = { hranges };
-    
-    cv::calcHist(&hue, 1, 0, cv::Mat(), hist, 1, &histSize, ranges, true, false);
-    
-    double maxVal=0;
-    minMaxLoc(hist, 0, &maxVal, 0, 0);
-    return maxVal;
+    return dominantColorVec;
 }
 
 + (NSString *) rgbColorToName:(cv::Vec3d)input {
     
     //Set vector values to R,G,B
-    double r = input[0];
+    double r = input[2];
     double g = input[1];
-    double b = input[2];
+    double b = input[0];
     
     NSString *color;
     if((b>g>r) && (b>= 128 && b<=255 && g<=255 && r<=255)){

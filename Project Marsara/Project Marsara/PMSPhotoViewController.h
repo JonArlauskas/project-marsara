@@ -25,6 +25,7 @@
 - (IBAction)takePicture:(UIButton *)sender;
 - (IBAction)selectPicture:(UIButton *)sender;
 - (IBAction)getRecommendations:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *TestLabel;
 
 
 
