@@ -186,29 +186,29 @@
 #pragma mark - Other useful functions
 
 + (UIImage *)resizeImage:(UIImage *)image toSize:(CGSize)size {
+    // Get desired size and width
     float width = size.width;
     float height = size.height;
     
+    // Create new Image context to create smaller image
     UIGraphicsBeginImageContext(size);
     CGRect rect = CGRectMake(0, 0, width, height);
     
+    // Maintain ratios of image
     float widthRatio = image.size.width / width;
     float heightRatio = image.size.height / height;
     float divisor = widthRatio > heightRatio ? widthRatio : heightRatio;
     
     width = image.size.width / divisor;
     height = image.size.height / divisor;
-    
     rect.size.width  = width;
     rect.size.height = height;
-    
     if(height < width)
         rect.origin.y = height / 3;
     
+    // Create image in rectangle and end image context
     [image drawInRect: rect];
-    
     UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
-    
     UIGraphicsEndImageContext();
     
     return smallImage;
