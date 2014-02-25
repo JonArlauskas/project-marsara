@@ -8,6 +8,7 @@
 
 #import "PMSCellViewController.h"
 #import "PMSResultViewController.h"
+#import "PMSLibraryViewController.h"
 
 @interface PMSCellViewController ()
 
@@ -68,16 +69,56 @@
 #pragma mark - Function for handling segue actions
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    PMSResultViewController *controller = (PMSResultViewController *)segue.destinationViewController;
-    // Get info from Core Data object
-    controller.resultingColour = [self.item valueForKey:@"color"];
-    controller.fromItemType = [self.item valueForKey:@"type"];
-    controller.fromImage = [UIImage imageWithData:[self.item valueForKey:@"image"]];
-    // Get current value of picker
-    NSInteger row = [self.itemTypePicker selectedRowInComponent:0];
-    controller.toItemType = [self.itemTypeArray objectAtIndex:row];
-    // Because we are coming from Library disable save button in result view
-    controller.saveButton.enabled = NO;
+    if([segue.identifier isEqualToString:@"PhotoToResult"]){
+        PMSResultViewController *controller = (PMSResultViewController *)segue.destinationViewController;
+        // Get info from Core Data object
+        controller.resultingColour = [self.item valueForKey:@"color"];
+        controller.fromItemType = [self.item valueForKey:@"type"];
+        controller.fromImage = [UIImage imageWithData:[self.item valueForKey:@"image"]];
+        // Get current value of picker
+        NSInteger row = [self.itemTypePicker selectedRowInComponent:0];
+        controller.toItemType = [self.itemTypeArray objectAtIndex:row];
+        // Because we are coming from Library disable save button in result view
+        controller.saveButton.enabled = NO;
+    } else if([segue.identifier isEqualToString:@"ItemDeletion"]) {
+        PMSLibraryViewController *controller = (PMSLibraryViewController *)segue.destinationViewController;
+        // Delete this item from core data
+        NSManagedObjectContext *context = nil;
+        id delegate = [[UIApplication sharedApplication] delegate];
+        if ([delegate performSelector:@selector(managedObjectContext)]) {
+            context = [delegate managedObjectContext];
+        }
+        [context deleteObject:self.item];
+        [controller.collectionView reloadData];
+    }
+}
+
+#pragma mark - Functions for handling item deletion
+
+- (IBAction)deleteItemButton:(UIBarButtonItem *)sender {
+    UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Delete"
+                                                          message:@"Are you sure you want to delete this item?"
+                                                         delegate:self
+                                                cancelButtonTitle:@"Cancel"
+                                                otherButtonTitles:@"Delete", nil];
+    [myAlertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        [self.navigationController popViewControllerAnimated:YES];
+        [self deleteItemCoreData];
+    }
+}
+
+- (void)deleteItemCoreData {
+    // Delete this item from core data
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    [context deleteObject:self.item];
 }
 
 @end

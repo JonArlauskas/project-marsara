@@ -231,7 +231,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Uxz-jI-gxV"/>
+                    <navigationItem key="navigationItem" id="Uxz-jI-gxV">
+                        <barButtonItem key="rightBarButtonItem" title="Delete" id="30z-WV-YAV">
+                            <connections>
+                                <action selector="deleteItemButton:" destination="soY-on-i4u" id="OCN-cF-yXQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="itemDescriptionLabel" destination="RNp-7m-uvE" id="6kz-CO-Ur4"/>
                         <outlet property="itemImageView" destination="qKd-TA-Xuh" id="liq-nR-Obw"/>
@@ -296,6 +302,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="6RQ-AY-Vdu"/>
+        <segue reference="zqr-lC-JaO"/>
     </inferredMetricsTieBreakers>
 </document>

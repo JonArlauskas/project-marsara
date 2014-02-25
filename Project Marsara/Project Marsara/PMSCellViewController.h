@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PMSCellViewController : UIViewController
+@interface PMSCellViewController : UIViewController <UIAlertViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIImageView *itemImageView;
 @property (weak, nonatomic) IBOutlet UILabel *itemDescriptionLabel;
 @property (nonatomic) NSManagedObject *item;
 @property (strong, nonatomic) NSArray *itemTypeArray;
 @property (weak, nonatomic) IBOutlet UIPickerView *itemTypePicker;
+- (IBAction)deleteItemButton:(UIBarButtonItem *)sender;
+- (void)deleteItemCoreData;
 
 @end
