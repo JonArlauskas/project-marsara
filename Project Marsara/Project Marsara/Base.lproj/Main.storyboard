@@ -105,7 +105,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HfH-pQ-2TW">
-                                <rect key="frame" x="46" y="437" width="228" height="30"/>
+                                <rect key="frame" x="46" y="439" width="228" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Get Recommendations">
@@ -113,7 +113,6 @@
                                 </state>
                                 <connections>
                                     <action selector="getRecommendations:" destination="0Hg-vU-Ilx" eventType="touchUpInside" id="d5T-GU-N4R"/>
-                                    <segue destination="LlZ-Yt-ZsP" kind="push" identifier="showColour" id="Ity-69-uU7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kyx-oT-Zg2">
@@ -123,6 +122,10 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="sMS-xi-2QK">
+                                <rect key="frame" x="280" y="444" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -132,6 +135,8 @@
                         <outlet property="getRecommendations" destination="HfH-pQ-2TW" id="k7T-bz-oOk"/>
                         <outlet property="imageView" destination="nS0-ac-1HY" id="yTK-ER-I0m"/>
                         <outlet property="itemTypePicker" destination="Hfw-Jl-yU6" id="dtV-pT-MUj"/>
+                        <outlet property="recommendActivityIndicator" destination="sMS-xi-2QK" id="Wuf-FV-DRG"/>
+                        <segue destination="LlZ-Yt-ZsP" kind="push" identifier="PhotoToResult" id="6RQ-AY-Vdu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2i0-O9-BgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -291,6 +296,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ity-69-uU7"/>
+        <segue reference="6RQ-AY-Vdu"/>
     </inferredMetricsTieBreakers>
 </document>

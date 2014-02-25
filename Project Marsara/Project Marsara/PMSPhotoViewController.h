@@ -25,7 +25,9 @@
 - (IBAction)takePicture:(UIButton *)sender;
 - (IBAction)selectPicture:(UIButton *)sender;
 - (IBAction)getRecommendations:(UIButton *)sender;
+- (void)backgroundDone;
 @property (weak, nonatomic) IBOutlet UILabel *TestLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *recommendActivityIndicator;
 
 
 

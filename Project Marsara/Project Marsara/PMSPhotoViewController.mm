@@ -45,6 +45,7 @@
 # pragma mark - UIButton action handler methods
 
 - (IBAction)takePicture:(UIButton *)sender {
+    
     // Create image picker and set source to be camera
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
@@ -70,6 +71,30 @@
     NSInteger secondRow = [self.itemTypePicker selectedRowInComponent:1];
     self.fromItemType = [self.itemTypeArray objectAtIndex:firstRow];
     self.toItemType = [self.itemTypeArray objectAtIndex:secondRow];
+    
+    // Start activity animator animating
+    [self.recommendActivityIndicator startAnimating];
+    // Run OpenCV calculations in background process
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        
+        // OpenCV calculations for dominant color in image
+        cv::Mat src = [PMSImageProcessing cvMatFromUIImage:self.fromImage];
+        cv::Vec3d result = [PMSImageProcessing findDominantColor:src];
+        self.TestLabel.text = [NSString stringWithFormat:
+                               @"R: %f G: %f B: %f",
+                               result[0], result[1], result[2]];
+        self.inputColor = [PMSImageProcessing rgbColorToName:result];
+        
+        // Run backgroundDone function when background process finishes
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self backgroundDone];
+        });
+    });
+}
+
+- (void)backgroundDone {
+    [self.recommendActivityIndicator stopAnimating];
+    [self performSegueWithIdentifier:@"PhotoToResult" sender:self];
 }
 
 
@@ -82,13 +107,6 @@
     self.fromImage = chosenImage;
     self.imageView.image = chosenImage;
     
-    // OpenCV calculations for dominant color in image
-    cv::Mat src = [PMSImageProcessing cvMatFromUIImage:chosenImage];
-    cv::Vec3d result = [PMSImageProcessing findDominantColor:src];
-    self.TestLabel.text = [NSString stringWithFormat:
-                           @"R: %f G: %f B: %f",
-                           result[0], result[1], result[2]];
-    self.inputColor = [PMSImageProcessing rgbColorToName:result];
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
     // Enable get recommendations button
@@ -128,7 +146,7 @@
 #pragma mark - Function for handling segue actions
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"showColour"]){
+    if([segue.identifier isEqualToString:@"PhotoToResult"]){
         PMSResultViewController *controller = (PMSResultViewController *)segue.destinationViewController;
         controller.resultingColour = self.inputColor;
         controller.fromItemType = self.fromItemType;
