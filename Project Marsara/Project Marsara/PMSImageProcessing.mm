@@ -146,34 +146,10 @@
 
 + (NSString *) rgbColorToName:(cv::Vec3d)input {
     // Initialize set of colors
-    NSDictionary *colorSet = @{@"Blue"          : [NSArray arrayWithObjects: @0, @0, @255, nil],
-                               @"Red"           : [NSArray arrayWithObjects: @255, @0, @0, nil],
-                               @"Lime"          : [NSArray arrayWithObjects: @0, @255, @0, nil],
-                               @"White"         : [NSArray arrayWithObjects: @255, @255, @255, nil],
-                               @"Maroon"        : [NSArray arrayWithObjects: @128, @0, @0, nil],
-                               @"Dark red"      : [NSArray arrayWithObjects: @139, @0, @0, nil],
-                               @"Firebrick"     : [NSArray arrayWithObjects: @178, @34, @34, nil],
-                               @"Crimson"       : [NSArray arrayWithObjects: @220, @20, @60, nil],
-                               @"Tomato"        : [NSArray arrayWithObjects: @255, @99, @71, nil],
-                               @"Coral"         : [NSArray arrayWithObjects: @255, @127, @80, nil],
-                               @"Indian red"    : [NSArray arrayWithObjects: @205, @92, @92, nil],
-                               @"Light coral"   : [NSArray arrayWithObjects: @240, @128, @128, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],
-                               @"Black"         : [NSArray arrayWithObjects: @0, @0, @0, nil],};
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ColorList"
+                                                     ofType:@"plist"];
+    NSDictionary *colorSet = [[NSDictionary alloc] initWithContentsOfFile:path];
     
     // Init containers
     NSMutableDictionary *minColors = [[NSMutableDictionary alloc]init];;
