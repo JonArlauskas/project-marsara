@@ -13,5 +13,6 @@
 + (UIImage *)UIImageFromCVMat:(cv::Mat)cvMat;
 + (cv::Vec3d)findDominantColor:(cv::Mat)input;
 + (NSString *) rgbColorToName:(cv::Vec3d)input;
++ (UIImage *)resizeImage:(UIImage *)image toSize:(CGSize)size;
 
 @end

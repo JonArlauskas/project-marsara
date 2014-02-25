@@ -183,4 +183,35 @@
     return colorName;
 }
 
+#pragma mark - Other useful functions
+
++ (UIImage *)resizeImage:(UIImage *)image toSize:(CGSize)size {
+    float width = size.width;
+    float height = size.height;
+    
+    UIGraphicsBeginImageContext(size);
+    CGRect rect = CGRectMake(0, 0, width, height);
+    
+    float widthRatio = image.size.width / width;
+    float heightRatio = image.size.height / height;
+    float divisor = widthRatio > heightRatio ? widthRatio : heightRatio;
+    
+    width = image.size.width / divisor;
+    height = image.size.height / divisor;
+    
+    rect.size.width  = width;
+    rect.size.height = height;
+    
+    if(height < width)
+        rect.origin.y = height / 3;
+    
+    [image drawInRect: rect];
+    
+    UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return smallImage;
+}
+
 @end

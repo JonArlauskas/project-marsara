@@ -78,7 +78,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         
         // OpenCV calculations for dominant color in image
-        cv::Mat src = [PMSImageProcessing cvMatFromUIImage:self.fromImage];
+        cv::Mat src = [PMSImageProcessing cvMatFromUIImage:self.reducedImage];
         cv::Vec3d result = [PMSImageProcessing findDominantColor:src];
         self.TestLabel.text = [NSString stringWithFormat:
                                @"R: %f G: %f B: %f",
@@ -104,8 +104,12 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.fromImage = chosenImage;
     self.imageView.image = chosenImage;
+    self.fromImage = chosenImage;
+    
+    // Reduce size of image used in image processing
+    CGSize reducedSize = {320, 320};
+    self.reducedImage = [PMSImageProcessing resizeImage:chosenImage toSize:reducedSize];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     

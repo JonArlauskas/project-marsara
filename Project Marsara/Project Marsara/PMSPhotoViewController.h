@@ -22,6 +22,7 @@
 @property (strong, nonatomic) NSString *toItemType;
 @property (strong, nonatomic) NSString *inputColor;
 @property (nonatomic) UIImage *fromImage;
+@property (nonatomic) UIImage *reducedImage;
 - (IBAction)takePicture:(UIButton *)sender;
 - (IBAction)selectPicture:(UIButton *)sender;
 - (IBAction)getRecommendations:(UIButton *)sender;
