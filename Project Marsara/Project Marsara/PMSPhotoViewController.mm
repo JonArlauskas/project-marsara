@@ -3,7 +3,7 @@
 //  Project Marsara
 //
 //  Created by Nicolas Langley on 2/22/14.
-//  Copyright (c) 2014 theregime. All rights reserved.
+//  Copyright (c) 2014 hierarchy. All rights reserved.
 //
 
 #import "PMSPhotoViewController.h"
