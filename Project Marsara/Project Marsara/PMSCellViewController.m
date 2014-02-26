@@ -119,6 +119,15 @@
         context = [delegate managedObjectContext];
     }
     [context deleteObject:self.item];
+    NSError *error;
+    if (![context save:&error]) {
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                              message:@"Item cannot be deleted!"
+                                                             delegate:self
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil];
+        [myAlertView show];
+    }
 }
 
 @end
