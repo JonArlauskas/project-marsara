@@ -18,4 +18,5 @@ DerivedData
 *.xccheckout
 
 #CocoaPods
-Pods
+#-- Want to allow other developers to pull and run
+#Pods
