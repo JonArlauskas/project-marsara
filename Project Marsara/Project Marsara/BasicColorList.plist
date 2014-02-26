@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Beige</key>
+	<array>
+		<integer>245</integer>
+		<integer>245</integer>
+		<integer>220</integer>
+	</array>
+	<key>Brown</key>
+	<array>
+		<integer>165</integer>
+		<integer>42</integer>
+		<integer>42</integer>
+	</array>
+	<key>Grey</key>
+	<array>
+		<integer>128</integer>
+		<integer>128</integer>
+		<integer>128</integer>
+	</array>
+	<key>White</key>
+	<array>
+		<integer>255</integer>
+		<integer>255</integer>
+		<integer>255</integer>
+	</array>
+	<key>Black</key>
+	<array>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>0</integer>
+	</array>
+	<key>Red Magenta</key>
+	<array>
+		<integer>255</integer>
+		<integer>0</integer>
+		<integer>255</integer>
+	</array>
+	<key>Magenta</key>
+	<array>
+		<integer>255</integer>
+		<integer>0</integer>
+		<integer>255</integer>
+	</array>
+	<key>Blue Magenta</key>
+	<array>
+		<integer>127</integer>
+		<integer>0</integer>
+		<integer>255</integer>
+	</array>
+	<key>Blue</key>
+	<array>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>255</integer>
+	</array>
+	<key>Blue Cyan</key>
+	<array>
+		<integer>0</integer>
+		<integer>127</integer>
+		<integer>255</integer>
+	</array>
+	<key>Cyan</key>
+	<array>
+		<integer>0</integer>
+		<integer>255</integer>
+		<integer>255</integer>
+	</array>
+	<key>Green Cyan</key>
+	<array>
+		<integer>0</integer>
+		<integer>255</integer>
+		<integer>127</integer>
+	</array>
+	<key>Green</key>
+	<array>
+		<integer>0</integer>
+		<integer>255</integer>
+		<integer>0</integer>
+	</array>
+	<key>Green Yellow</key>
+	<array>
+		<integer>127</integer>
+		<integer>255</integer>
+		<integer>0</integer>
+	</array>
+	<key>Red</key>
+	<array>
+		<integer>255</integer>
+		<integer>0</integer>
+		<integer>0</integer>
+	</array>
+	<key>Orange</key>
+	<array>
+		<integer>255</integer>
+		<integer>127</integer>
+		<integer>0</integer>
+	</array>
+	<key>Yellow</key>
+	<array>
+		<integer>255</integer>
+		<integer>255</integer>
+		<integer>0</integer>
+	</array>
+</dict>
+</plist>

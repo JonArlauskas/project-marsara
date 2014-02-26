@@ -100,7 +100,7 @@
     // Map the src to the samples    
     std::vector<cv::Mat> imgRGB;
     cv::split(src,imgRGB);
-    int n = src.total();
+    int n = (int)src.total();
     cv::Mat samples(n,3,CV_8U);
     for(int i=0;i!=3;++i)
         imgRGB[i].reshape(1,n).copyTo(samples.col(i));
@@ -152,8 +152,8 @@
     NSDictionary *colorSet = [[NSDictionary alloc] initWithContentsOfFile:path];
     
     // Init containers
-    NSMutableDictionary *minColors = [[NSMutableDictionary alloc]init];;
-    NSMutableArray *colorValues = [[NSMutableArray alloc]init];;
+    NSMutableDictionary *minColors = [[NSMutableDictionary alloc]init];
+    NSMutableArray *colorValues = [[NSMutableArray alloc]init];
     
     // Create color set of colors using euclidean distance
     for (NSString *key in colorSet) {

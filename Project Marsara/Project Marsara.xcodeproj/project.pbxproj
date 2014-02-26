@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23265AC018BC6CEF00DE4DDC /* BasicColorList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23265ABF18BC6CEF00DE4DDC /* BasicColorList.plist */; };
 		23339CD118BBF8FD007C9628 /* ColorList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23339CD018BBF8FD007C9628 /* ColorList.plist */; };
 		23E1B81A18B8EC35000C376E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B81918B8EC35000C376E /* Foundation.framework */; };
 		23E1B81C18B8EC35000C376E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B81B18B8EC35000C376E /* CoreGraphics.framework */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23265ABF18BC6CEF00DE4DDC /* BasicColorList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BasicColorList.plist; sourceTree = "<group>"; };
 		23339CD018BBF8FD007C9628 /* ColorList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ColorList.plist; sourceTree = "<group>"; };
 		23E1B81618B8EC35000C376E /* Project Marsara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Marsara.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E1B81918B8EC35000C376E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -179,6 +181,7 @@
 				23E1B82518B8EC35000C376E /* main.m */,
 				23E1B82718B8EC35000C376E /* Project Marsara-Prefix.pch */,
 				23339CD018BBF8FD007C9628 /* ColorList.plist */,
+				23265ABF18BC6CEF00DE4DDC /* BasicColorList.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				23E1B82418B8EC35000C376E /* InfoPlist.strings in Resources */,
 				23339CD118BBF8FD007C9628 /* ColorList.plist in Resources */,
 				23E1B82D18B8EC35000C376E /* Main.storyboard in Resources */,
+				23265AC018BC6CEF00DE4DDC /* BasicColorList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/nicolaslangley/Development/Xcode\\ Projects/project-marsara/Project\\ Marsara",
@@ -449,6 +454,7 @@
 				GCC_PREFIX_HEADER = "Project Marsara/Project Marsara-Prefix.pch";
 				INFOPLIST_FILE = "Project Marsara/Project Marsara-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6E084E12-FBF1-438E-AF56-4979005A560E";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -459,6 +465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/nicolaslangley/Development/Xcode\\ Projects/project-marsara/Project\\ Marsara",
@@ -467,6 +474,7 @@
 				GCC_PREFIX_HEADER = "Project Marsara/Project Marsara-Prefix.pch";
 				INFOPLIST_FILE = "Project Marsara/Project Marsara-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C038E4F4-3CD7-4C54-937C-975871F644D0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
