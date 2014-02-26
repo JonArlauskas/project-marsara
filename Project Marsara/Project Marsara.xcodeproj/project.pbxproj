@@ -46,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2324FAEA18BE5E2300F2FE57 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		2324FAEC18BE5E2D00F2FE57 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		23265ABF18BC6CEF00DE4DDC /* BasicColorList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BasicColorList.plist; sourceTree = "<group>"; };
 		23339CD018BBF8FD007C9628 /* ColorList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ColorList.plist; sourceTree = "<group>"; };
 		23E1B81618B8EC35000C376E /* Project Marsara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Marsara.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,8 @@
 		23E1B81818B8EC35000C376E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2324FAEC18BE5E2D00F2FE57 /* AdSupport.framework */,
+				2324FAEA18BE5E2300F2FE57 /* libz.dylib */,
 				23E1B85C18B9C294000C376E /* CoreData.framework */,
 				23E1B81918B8EC35000C376E /* Foundation.framework */,
 				23E1B81B18B8EC35000C376E /* CoreGraphics.framework */,
