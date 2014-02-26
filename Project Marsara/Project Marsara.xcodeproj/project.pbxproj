@@ -25,7 +25,6 @@
 		23E1B84518B8EC36000C376E /* Project_MarsaraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B84418B8EC36000C376E /* Project_MarsaraTests.m */; };
 		23E1B85018B90621000C376E /* PMSPhotoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B84F18B90621000C376E /* PMSPhotoViewController.mm */; };
 		23E1B85318B920E8000C376E /* PMSResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85218B920E8000C376E /* PMSResultViewController.m */; };
-		23E1B85518B92280000C376E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B85418B92280000C376E /* opencv2.framework */; };
 		23E1B85818B926D4000C376E /* PMSImageProcessing.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85718B926D4000C376E /* PMSImageProcessing.mm */; };
 		23E1B85B18B9A797000C376E /* PMSOutfitRecommender.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B85A18B9A797000C376E /* PMSOutfitRecommender.m */; };
 		23E1B85D18B9C294000C376E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1B85C18B9C294000C376E /* CoreData.framework */; };
@@ -33,6 +32,7 @@
 		23E1B86318B9CE58000C376E /* PMSLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B86218B9CE58000C376E /* PMSLibraryViewController.m */; };
 		23E1B86618B9CEDB000C376E /* PMSLibraryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B86518B9CEDB000C376E /* PMSLibraryCell.m */; };
 		23E1B86918B9D4F3000C376E /* PMSCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B86818B9D4F3000C376E /* PMSCellViewController.m */; };
+		F975BAC6FEB04F28A4991469 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA46A9A7F7404ACD90A67696 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,6 @@
 		23E1B84F18B90621000C376E /* PMSPhotoViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PMSPhotoViewController.mm; sourceTree = "<group>"; };
 		23E1B85118B920E8000C376E /* PMSResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSResultViewController.h; sourceTree = "<group>"; };
 		23E1B85218B920E8000C376E /* PMSResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSResultViewController.m; sourceTree = "<group>"; };
-		23E1B85418B92280000C376E /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		23E1B85618B926B2000C376E /* PMSImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSImageProcessing.h; sourceTree = "<group>"; };
 		23E1B85718B926D4000C376E /* PMSImageProcessing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PMSImageProcessing.mm; sourceTree = "<group>"; };
 		23E1B85918B9A797000C376E /* PMSOutfitRecommender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSOutfitRecommender.h; sourceTree = "<group>"; };
@@ -84,6 +83,8 @@
 		23E1B86518B9CEDB000C376E /* PMSLibraryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSLibraryCell.m; sourceTree = "<group>"; };
 		23E1B86718B9D4F3000C376E /* PMSCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSCellViewController.h; sourceTree = "<group>"; };
 		23E1B86818B9D4F3000C376E /* PMSCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSCellViewController.m; sourceTree = "<group>"; };
+		6F8D416E71EC4FBF8D7B5324 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		BA46A9A7F7404ACD90A67696 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +93,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				23E1B85D18B9C294000C376E /* CoreData.framework in Frameworks */,
-				23E1B85518B92280000C376E /* opencv2.framework in Frameworks */,
 				23E1B81C18B8EC35000C376E /* CoreGraphics.framework in Frameworks */,
 				23E1B81E18B8EC35000C376E /* UIKit.framework in Frameworks */,
 				23E1B81A18B8EC35000C376E /* Foundation.framework in Frameworks */,
+				F975BAC6FEB04F28A4991469 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +120,7 @@
 				23E1B83E18B8EC36000C376E /* Project MarsaraTests */,
 				23E1B81818B8EC35000C376E /* Frameworks */,
 				23E1B81718B8EC35000C376E /* Products */,
+				6F8D416E71EC4FBF8D7B5324 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,11 +137,11 @@
 			isa = PBXGroup;
 			children = (
 				23E1B85C18B9C294000C376E /* CoreData.framework */,
-				23E1B85418B92280000C376E /* opencv2.framework */,
 				23E1B81918B8EC35000C376E /* Foundation.framework */,
 				23E1B81B18B8EC35000C376E /* CoreGraphics.framework */,
 				23E1B81D18B8EC35000C376E /* UIKit.framework */,
 				23E1B83818B8EC36000C376E /* XCTest.framework */,
+				BA46A9A7F7404ACD90A67696 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -211,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23E1B84818B8EC36000C376E /* Build configuration list for PBXNativeTarget "Project Marsara" */;
 			buildPhases = (
+				F774FFDBD6B949C8A11C24F2 /* Check Pods Manifest.lock */,
 				23E1B81218B8EC35000C376E /* Sources */,
 				23E1B81318B8EC35000C376E /* Frameworks */,
 				23E1B81418B8EC35000C376E /* Resources */,
+				452BD39032844E3386529961 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -301,6 +305,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		452BD39032844E3386529961 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F774FFDBD6B949C8A11C24F2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		23E1B81218B8EC35000C376E /* Sources */ = {
@@ -441,6 +478,7 @@
 		};
 		23E1B84918B8EC36000C376E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F8D416E71EC4FBF8D7B5324 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -461,6 +499,7 @@
 		};
 		23E1B84A18B8EC36000C376E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F8D416E71EC4FBF8D7B5324 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -474,7 +513,7 @@
 				GCC_PREFIX_HEADER = "Project Marsara/Project Marsara-Prefix.pch";
 				INFOPLIST_FILE = "Project Marsara/Project Marsara-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C038E4F4-3CD7-4C54-937C-975871F644D0";
+				PROVISIONING_PROFILE = "791AE973-0025-46D0-86A9-032AF00F2C90";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
